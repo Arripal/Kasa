@@ -5,7 +5,7 @@ import Logement from './pages/Logement/Logement';
 import About from './pages/About/About';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-
+import '../main.css';
 const router = createBrowserRouter([
 	{
 		path: '/',
