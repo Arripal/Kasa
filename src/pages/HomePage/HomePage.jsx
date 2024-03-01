@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from '../../composants/Header/Header';
+import Banniere from '../../composants/Banniere/Banniere';
 import Footer from '../../composants/Footer/Footer';
-
+import background_image from '../../assets/images/bannieres/image-desktop-accueil.webp';
 const HomePage = () => {
 	return (
 		<>
 			<Header />
-			<h1>Home Page</h1>
+			<Banniere background_image={background_image} />
 			<Footer />
 		</>
 	);
