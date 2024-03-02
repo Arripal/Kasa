@@ -3,11 +3,14 @@ import Header from '../../composants/Header/Header';
 import Banniere from '../../composants/Banniere/Banniere';
 import Footer from '../../composants/Footer/Footer';
 import background_image from '../../assets/images/bannieres/image-desktop-accueil.webp';
+import './homepage.style.scss';
 const HomePage = () => {
 	return (
 		<>
-			<Header />
-			<Banniere background_image={background_image} />
+			<main className="main">
+				<Header />
+				<Banniere background_image={background_image} />
+			</main>
 			<Footer />
 		</>
 	);

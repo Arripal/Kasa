@@ -9,7 +9,7 @@ const Banniere = ({ background_image }) => {
 		>
 			<p className="banniere__text">
 				Chez vous,
-				<br /> partout et ailleurs
+				<br className="br__mobile" /> partout et ailleurs
 			</p>
 		</section>
 	);
