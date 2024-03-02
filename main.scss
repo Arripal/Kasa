@@ -66,3 +66,9 @@ $background-colors: (
 	'secondary': #f6f6f6,
 	'third': #000000,
 );
+
+@mixin background-image {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}

@@ -1,9 +1,7 @@
 @import '../../../main.scss';
 
 .banniere {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+	@include background-image;
 	min-height: 111px;
 	max-height: 223px;
 	margin-top: 28px;
