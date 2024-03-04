@@ -32,7 +32,7 @@ a {
 
 /*    FIN REINITIALISATION    */
 
-/*   Maps   */
+/*   Variables   */
 
 $font-sizes: (
 	'double-large': 48px,
@@ -45,30 +45,36 @@ $font-sizes: (
 	'extra-small': 10px,
 );
 
-$font-colors: (
-	'primary': #ffffff,
-	'secondary': #000000,
-	'third': #ff6060,
-);
+$font-color-primary: #ffffff;
+$font-color-secondary: #000000;
+$font-color-third: #ff6060;
 
-$font-weights: (
-	'regular': 400,
-	'medium': 600,
-	'bold': bold,
-);
-$card-colors: (
-	'primary': #ff6060,
-	'secondary': #ffffff,
-);
+$font-weight-regular: 400;
+$font-weight-medium: 600;
+$font-weight-bold: bold;
 
-$background-colors: (
-	'primary': #ffffff,
-	'secondary': #f6f6f6,
-	'third': #000000,
-);
+$card-color-primary: #ff6060;
+$card-color-secondary: #ffffff;
+
+$background-color-primary: #ffffff;
+$background-color-secondary: #f6f6f6;
+$background-color-third: #000000;
+$background-color-four: #ff6060;
 
 @mixin background-image {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+}
+
+@mixin font($weight, $size, $color) {
+	font-weight: $weight;
+	font-size: $size;
+	color: $color;
+}
+
+@mixin flex-all-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

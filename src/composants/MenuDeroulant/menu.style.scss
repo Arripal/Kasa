@@ -1,0 +1,19 @@
+@import '../../../main.scss';
+
+.menu {
+	.menu__categorie {
+		height: 30px;
+		@include flex-all-center;
+		justify-content: space-between;
+		@include font($font-weight-bold, 13px, $font-color-primary);
+		background-color: $background-color-four;
+		border-radius: 5px;
+		padding: 0 0.625em;
+	}
+
+	.menu__contenu {
+		@include font($font-weight-regular, 13px, $font-color-secondary);
+		background-color: $background-color-secondary;
+		padding: 0.7em;
+	}
+}

@@ -8,9 +8,8 @@
 	border-radius: 15px;
 	margin: 20px 0;
 	.card__title {
-		font-size: map-get($map: $font-sizes, $key: regular);
-		font-weight: map-get($map: $font-weights, $key: bold);
-		color: map-get($map: $font-colors, $key: primary);
+		@include font($font-weight-bold, 18px, $font-color-primary);
+
 		position: absolute;
 		bottom: 20px;
 		left: 20px;

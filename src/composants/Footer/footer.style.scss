@@ -3,15 +3,12 @@
 .footer {
 	width: 100%;
 	height: 209px;
-	background-color: map-get($map: $background-colors, $key: third);
-	display: flex;
+	background-color: $background-color-third;
+	@include flex-all-center;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+
 	.footer__copyright {
-		color: map-get($map: $font-colors, $key: primary);
-		font-weight: map-get($map: $font-weights, $key: medium);
-		font-size: map-get($map: $font-sizes, $key: small);
+		@include font($font-weight-medium, 12px, $font-color-primary);
 		line-height: 1.6;
 		margin-top: 15px;
 	}
