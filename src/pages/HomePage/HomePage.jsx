@@ -1,12 +1,24 @@
 import React from 'react';
 import Header from '../../composants/Header/Header';
+import Banniere from '../../composants/Banniere/Banniere';
+import Gallerie from '../../composants/Gallerie/Gallerie';
 import Footer from '../../composants/Footer/Footer';
-
+import background_image from '../../assets/images/bannieres/image-desktop-accueil.webp';
+import './homepage.style.scss';
 const HomePage = () => {
+	const banniere_text = (
+		<p className="banniere__text">
+			Chez vous,
+			<br className="br__mobile" /> partout et ailleurs
+		</p>
+	);
 	return (
 		<>
-			<Header />
-			<h1>Home Page</h1>
+			<main className="main">
+				<Header />
+				<Banniere background_image={background_image} text={banniere_text} />
+				<Gallerie />
+			</main>
 			<Footer />
 		</>
 	);

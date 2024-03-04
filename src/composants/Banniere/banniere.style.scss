@@ -1,0 +1,30 @@
+@import '../../../main.scss';
+
+.banniere {
+	@include background-image;
+	min-height: 111px;
+	max-height: 223px;
+	margin-top: 28px;
+	margin-bottom: 20px;
+	border-radius: 15px;
+	overflow: hidden;
+	.banniere__text {
+		backdrop-filter: brightness(50%);
+		display: flex;
+		align-items: center;
+		height: 111px;
+		font-size: map-get($map: $font-sizes, $key: large);
+		color: map-get($map: $font-colors, $key: primary);
+		font-weight: map-get($map: $font-weights, $key: bold);
+		padding-left: 10px;
+	}
+}
+
+@media screen and (min-width: 450px) {
+	.banniere__text {
+		justify-content: center;
+	}
+	.br__mobile {
+		display: none;
+	}
+}

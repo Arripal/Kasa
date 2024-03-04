@@ -21,28 +21,54 @@ html {
 	text-size-adjust: none;
 }
 
-img {
-	max-width: 100%;
-	display: block;
-}
-
 input,
 button {
 	font: inherit;
 }
+
+a {
+	text-decoration: none;
+}
+
 /*    FIN REINITIALISATION    */
 
-/*   VARIABLES FONT  */
+/*   Maps   */
 
-$fontsize__double-large: 48px;
-$fontsize__extra-large: 36px;
-$fontsize__large: 24px;
-$fontsize__regular: 18px;
-$fontsize__semi-regular: 14px;
-$fontsize__small-plus: 13px;
-$fontsize__small: 12px;
-$fontsize__extra-small: 10px;
+$font-sizes: (
+	'double-large': 48px,
+	'extra-large': 36px,
+	'large': 24px,
+	'regular': 18px,
+	'semi-regular': 14px,
+	'small-plus': 13px,
+	'small': 12px,
+	'extra-small': 10px,
+);
 
-$fontweight__bold: bold;
-$fontweight__regular: 400;
-$fontweight__medium: 500;
+$font-colors: (
+	'primary': #ffffff,
+	'secondary': #000000,
+	'third': #ff6060,
+);
+
+$font-weights: (
+	'regular': 400,
+	'medium': 600,
+	'bold': bold,
+);
+$card-colors: (
+	'primary': #ff6060,
+	'secondary': #ffffff,
+);
+
+$background-colors: (
+	'primary': #ffffff,
+	'secondary': #f6f6f6,
+	'third': #000000,
+);
+
+@mixin background-image {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}

@@ -1,7 +1,9 @@
 import React from 'react';
-
+import { useParams } from 'react-router-dom';
 const Logement = () => {
-	return <div>Un logement</div>;
+	const { locationID } = useParams();
+
+	return <div>Logement correspondant à l'id {locationID} </div>;
 };
 
 export default Logement;
