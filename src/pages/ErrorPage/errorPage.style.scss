@@ -1,0 +1,25 @@
+@import '../../../main.scss';
+
+.errorPage {
+	@include main;
+	@include min-height-main;
+
+	.errorPage__list {
+		padding-top: 1em;
+		list-style-type: none;
+		@include flex-column-between;
+		align-items: center;
+		& li {
+			padding: 3em 0;
+			.errorPage__list-link {
+				@include font($font-weight-medium, 14px, $font-color-secondary);
+				@include link-underline;
+			}
+			.errorPage__list-paragraph {
+				@include font($font-weight-medium, 18px, $font-color-third);
+				text-align: center;
+				line-height: 1.6;
+			}
+		}
+	}
+}

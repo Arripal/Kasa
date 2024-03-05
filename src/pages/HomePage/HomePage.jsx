@@ -14,7 +14,7 @@ const HomePage = () => {
 	);
 	return (
 		<>
-			<main className="main">
+			<main className="homepage">
 				<Header />
 				<Banniere background_image={background_image} text={banniere_text} />
 				<Gallerie />

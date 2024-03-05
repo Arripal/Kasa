@@ -17,8 +17,12 @@ const router = createBrowserRouter([
 		element: <Logement />,
 	},
 	{
-		path: '/about',
+		path: 'about',
 		element: <About />,
+	},
+	{
+		path: 'not_found',
+		element: <ErrorPage />,
 	},
 ]);
 

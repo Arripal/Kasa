@@ -3,6 +3,7 @@ import './gallerie.style.scss';
 import { NavLink } from 'react-router-dom';
 import Card from '../Card/Card';
 import appartements from '../../assets/appartements/appartements.json';
+
 const Gallerie = () => {
 	const cardsList = appartements.map((appartement) => {
 		return (

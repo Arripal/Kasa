@@ -1,6 +1,7 @@
 @import '../../../main.scss';
 
 .menu {
+	margin-bottom: 1em;
 	.menu__categorie {
 		height: 30px;
 		@include flex-all-center;
@@ -14,6 +15,17 @@
 	.menu__contenu {
 		@include font($font-weight-regular, 13px, $font-color-secondary);
 		background-color: $background-color-secondary;
+		opacity: 0;
+		height: 0;
 		padding: 0.7em;
+		border-bottom-right-radius: 5px;
+		border-bottom-left-radius: 5px;
+		line-height: 1.3;
+		transition: height ease 0.9s;
+	}
+
+	.menu__contenu-anime {
+		opacity: 1;
+		height: fit-content;
 	}
 }

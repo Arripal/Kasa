@@ -7,6 +7,7 @@
 	height: 255px;
 	border-radius: 15px;
 	margin: 20px 0;
+	box-shadow: 0 2px 2px 0 rgba(0, 0%, 0%, 0.25);
 	.card__title {
 		@include font($font-weight-bold, 18px, $font-color-primary);
 

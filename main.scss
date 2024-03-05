@@ -73,8 +73,33 @@ $background-color-four: #ff6060;
 	color: $color;
 }
 
+@mixin link-underline {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
 @mixin flex-all-center {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+@mixin flex-column-between {
+	flex-direction: column;
+	display: flex;
+	justify-content: space-between;
+}
+
+@mixin flex-evenly {
+	justify-content: space-evenly;
+}
+
+@mixin main {
+	margin: 0 auto;
+	padding: 1.25em 1.25em 0 1.25em;
+	max-width: 1240px;
+}
+
+@mixin min-height-main {
+	min-height: 74.9vh;
 }
