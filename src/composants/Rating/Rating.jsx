@@ -4,7 +4,7 @@ import fullStar from '../../assets/images/stars/star-full.png';
 import './rating.style.scss';
 const Rating = ({ rating }) => {
 	const ratings = [1, 2, 3, 4, 5];
-	const starsList = ratings.map((_, index) => {
+	const displayRating = ratings.map((_, index) => {
 		return (
 			<img
 				src={rating > index ? fullStar : emptyStar}
@@ -13,7 +13,7 @@ const Rating = ({ rating }) => {
 			/>
 		);
 	});
-	return <section className="rating">{starsList}</section>;
+	return <section className="rating">{displayRating}</section>;
 };
 
 export default Rating;
