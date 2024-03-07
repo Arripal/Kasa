@@ -20,4 +20,17 @@
 		margin: 5px 0;
 		@include font($font-weight-medium, 14px, $font-color-secondary);
 	}
+
+	.logement__owner {
+		@include flex-all-center;
+		justify-content: space-between;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.logement__equipments {
+		list-style-type: none;
+		.logement__equipments-li {
+			padding: 0.2em 0;
+		}
+	}
 }

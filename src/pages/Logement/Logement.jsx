@@ -7,13 +7,27 @@ import ErrorPage from '../ErrorPage/ErrorPage';
 import Collapse from '../../composants/Collapse/Collapse';
 import Tag from '../../composants/Tag/Tag';
 import Rating from '../../composants/Rating/Rating';
+import Owner from '../../composants/Owner/Owner';
 import './logement.style.scss';
 
 const Logement = () => {
 	const { locationID } = useParams();
 
 	const appart = appartements.find((appart) => appart.id === locationID);
-
+	const equipmentsList = (
+		<ul className="logement__equipments">
+			{appart.equipments.map((equipment, index) => {
+				return (
+					<li
+						className="logement__equipments-li"
+						key={`${equipment}--${index}`}
+					>
+						{equipment}
+					</li>
+				);
+			})}
+		</ul>
+	);
 	if (!appart) {
 		return <ErrorPage />;
 	}
@@ -33,9 +47,12 @@ const Logement = () => {
 							return <Tag name={tag} key={`${tag}--${index}`} />;
 						})}
 					</div>
-					<section>
+					<section className="logement__owner">
 						<Rating rating={appart.rating} />
+						<Owner owner={appart.host} />
 					</section>
+					<Collapse categorie="Description" contenu={appart.description} />
+					<Collapse categorie="Équipements" contenu={equipmentsList} />
 				</main>
 
 				<Footer />

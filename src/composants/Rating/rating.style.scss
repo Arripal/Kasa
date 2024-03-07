@@ -1,4 +1,7 @@
+@import '../../../main.scss';
+
 .rating {
+	@include flex-all-center;
 	width: 98px;
-	height: 18px;
+	height: 33.59px;
 }

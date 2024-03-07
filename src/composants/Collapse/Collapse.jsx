@@ -22,20 +22,19 @@ const Collapse = ({ categorie, contenu }) => {
 				></img>
 			</h2>
 
-			<p
+			<div
 				className={
 					isMenuOpen ? `menu__contenu menu__contenu-anime` : 'menu__contenu'
 				}
 			>
 				{contenu}
-			</p>
+			</div>
 		</div>
 	);
 };
 
 Collapse.propTypes = {
 	categorie: PropTypes.string,
-	contenu: PropTypes.string,
 };
 Collapse.defaultProps = {
 	categorie: 'Catégorie manquante',
