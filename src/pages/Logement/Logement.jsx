@@ -6,6 +6,7 @@ import Footer from '../../composants/Footer/Footer';
 import ErrorPage from '../ErrorPage/ErrorPage';
 import Collapse from '../../composants/Collapse/Collapse';
 import Tag from '../../composants/Tag/Tag';
+import Rating from '../../composants/Rating/Rating';
 import './logement.style.scss';
 
 const Logement = () => {
@@ -32,6 +33,9 @@ const Logement = () => {
 							return <Tag name={tag} key={`${tag}--${index}`} />;
 						})}
 					</div>
+					<section>
+						<Rating rating={appart.rating} />
+					</section>
 				</main>
 
 				<Footer />
