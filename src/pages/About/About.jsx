@@ -1,15 +1,15 @@
 import React from 'react';
 import Header from '../../composants/Header/Header';
-import Banniere from '../../composants/Banniere/Banniere';
+import Banner from '../../composants/Banner/Banner';
 import Footer from '../../composants/Footer/Footer';
-import banniereAbout from '../../assets/images/bannieres/image-mobile-about.webp';
-import MenuDeroulant from '../../composants/MenuDeroulant/MenuDeroulant';
-import data from './dataAbout';
+import bannerAbout from '../../assets/images/bannieres/image-mobile-about.webp';
+import Collapse from '../../composants/Collapse/Collapse';
+import data from './data';
 import './about.style.scss';
 const About = () => {
 	const categorieList = data.map((data, index) => {
 		return (
-			<MenuDeroulant
+			<Collapse
 				categorie={data.categorie}
 				contenu={data.contenu}
 				key={`${data.categorie}--${index}`}
@@ -20,7 +20,7 @@ const About = () => {
 		<>
 			<main className="about">
 				<Header />
-				<Banniere text="" background_image={banniereAbout} />
+				<Banner text="" background_image={bannerAbout} />
 				{categorieList}
 			</main>
 			<Footer />

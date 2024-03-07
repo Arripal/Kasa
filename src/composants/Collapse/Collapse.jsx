@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './menu.style.scss';
-import arrowUp from '../../assets/images/arrows/arrowUp.svg';
+import './collapse.style.scss';
+import arrow from '../../assets/images/arrows/arrowUp.svg';
 
-const MenuDeroulant = ({ categorie, contenu }) => {
+const Collapse = ({ categorie, contenu }) => {
 	const [isMenuOpen, setMenu] = useState(false);
 
 	function toggleMenu() {
@@ -15,7 +15,7 @@ const MenuDeroulant = ({ categorie, contenu }) => {
 			<h2 className="menu__categorie">
 				{categorie}
 				<img
-					src={arrowUp}
+					src={arrow}
 					alt="arrow icon"
 					className="menu__categorie-arrow"
 					onClick={toggleMenu}
@@ -33,12 +33,12 @@ const MenuDeroulant = ({ categorie, contenu }) => {
 	);
 };
 
-MenuDeroulant.propTypes = {
+Collapse.propTypes = {
 	categorie: PropTypes.string,
 	contenu: PropTypes.string,
 };
-MenuDeroulant.defaultProps = {
+Collapse.defaultProps = {
 	categorie: 'Catégorie manquante',
 	contenu: 'Aucun contenu disponible pour le moment.',
 };
-export default MenuDeroulant;
+export default Collapse;

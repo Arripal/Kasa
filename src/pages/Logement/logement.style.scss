@@ -1,0 +1,23 @@
+@import '../../../main.scss';
+
+.logement {
+	@include main;
+	margin-bottom: 50px;
+	.logement__tags {
+		margin: 10px 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 85%;
+		height: 18px;
+	}
+	.logement__title {
+		@include font($font-weight-medium, 18px, $font-color-third);
+		line-height: 1.6;
+	}
+
+	.logement__location {
+		margin: 5px 0;
+		@include font($font-weight-medium, 14px, $font-color-secondary);
+	}
+}

@@ -1,10 +1,10 @@
 import React from 'react';
-import './banniere.style.scss';
+import './banner.style.scss';
 
-const Banniere = ({ background_image, text }) => {
+const Banner = ({ background_image, text }) => {
 	return (
 		<section
-			className="banniere"
+			className="banner"
 			style={{ backgroundImage: `url(${background_image})` }}
 		>
 			{text}
@@ -12,4 +12,4 @@ const Banniere = ({ background_image, text }) => {
 	);
 };
 
-export default Banniere;
+export default Banner;
