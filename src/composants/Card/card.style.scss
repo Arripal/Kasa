@@ -4,10 +4,14 @@
 	position: relative;
 	@include background-image;
 	min-width: 335px;
+	max-width: 340px;
 	height: 255px;
 	border-radius: 15px;
 	margin: 20px 0;
 	box-shadow: 0 2px 2px 0 rgba(0, 0%, 0%, 0.25);
+	@media (min-width: 465px) {
+		height: 340px;
+	}
 	.card__title {
 		@include font($font-weight-bold, 18px, $font-color-primary);
 

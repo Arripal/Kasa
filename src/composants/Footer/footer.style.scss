@@ -7,14 +7,26 @@
 	background-color: $background-color-third;
 	@include flex-all-center;
 	flex-direction: column;
-
+	@media (min-width: 450px) {
+		justify-content: space-around;
+	}
 	.footer__copyright {
 		@include font($font-weight-medium, 12px, $font-color-primary);
 		line-height: 1.6;
 		margin-top: 15px;
+		@media (min-width: 450px) {
+			margin-top: 0;
+			@include font($font-weight-regular, 24px, $font-color-primary);
+			.br__mobile {
+				display: none;
+			}
+		}
 	}
 	.footer__image {
 		width: 122px;
 		height: 40px;
+		@media (min-width: 450px) {
+			margin-top: 50px;
+		}
 	}
 }
