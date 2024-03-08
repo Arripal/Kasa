@@ -14,6 +14,11 @@ const Logement = () => {
 	const { locationID } = useParams();
 
 	const appart = appartements.find((appart) => appart.id === locationID);
+
+	if (!appart) {
+		return <ErrorPage />;
+	}
+
 	const equipmentsList = (
 		<ul className="logement__equipments">
 			{appart.equipments.map((equipment, index) => {
@@ -28,9 +33,6 @@ const Logement = () => {
 			})}
 		</ul>
 	);
-	if (!appart) {
-		return <ErrorPage />;
-	}
 
 	return (
 		appart && (

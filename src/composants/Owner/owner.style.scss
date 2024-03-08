@@ -4,6 +4,7 @@
 	@include flex-all-center;
 	.owner__name {
 		@include font($font-weight-medium, 12px, $font-color-third);
+		width: 50px;
 		text-align: right;
 		line-height: 1.4;
 		margin-right: 5px;

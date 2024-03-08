@@ -2,28 +2,40 @@
 
 .banner {
 	@include background-image;
-	min-height: 111px;
-	max-height: 223px;
+	position: relative;
+	height: 111px;
 	margin-top: 28px;
 	margin-bottom: 20px;
 	border-radius: 15px;
 	overflow: hidden;
-	background-blend-mode: darken;
+	@media (min-width: 765px) {
+		height: 223px;
+	}
+	.banner__background {
+		width: 100%;
+		height: inherit;
+		background-size: cover;
+		background-position: center;
+		filter: brightness(50%);
+	}
+
 	.banner__text {
-		backdrop-filter: brightness(50%);
 		@include font($font-weight-bold, 24px, $font-color-primary);
 		@include flex-all-center;
 		justify-content: flex-start;
-		height: 111px;
+		height: inherit;
+		width: 100%;
 		padding-left: 10px;
-	}
-}
-
-@media screen and (min-width: 450px) {
-	.banner__text {
-		justify-content: center;
-	}
-	.br__mobile {
-		display: none;
+		position: absolute;
+		top: 0;
+		@media (min-width: 450px) {
+			justify-content: center;
+			.br__mobile {
+				display: none;
+			}
+		}
+		@media (min-width: 765px) {
+			@include font($font-weight-bold, 48px, $font-color-primary);
+		}
 	}
 }

@@ -6,6 +6,10 @@
 	width: 100%;
 	height: 47px;
 
+	@media (min-width: 545px) {
+		height: 68px;
+	}
+
 	.header__image {
 		width: 145px;
 		height: 47px;
@@ -15,12 +19,29 @@
 		@include flex-all-center;
 		justify-content: space-between;
 		width: 46%;
-		.active {
-			@include link-underline;
+
+		@media (min-width: 465px) {
+			justify-content: flex-end;
 		}
+
 		.nav__link {
 			@include font($font-weight-medium, 12px, $font-color-secondary);
 			text-transform: uppercase;
+
+			&.active {
+				@include link-underline;
+			}
+
+			@media (min-width: 465px) {
+				text-transform: none;
+				&-about {
+					padding-left: 1.5em;
+				}
+			}
+
+			@media (min-width: 545px) {
+				@include font($font-weight-medium, 24px, $font-color-secondary);
+			}
 		}
 	}
 }
