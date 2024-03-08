@@ -1,8 +1,8 @@
 import React from 'react';
 import Header from '../../composants/Header/Header';
-import Banner from '../../composants/Banner/Banner';
+import AboutBanner from '../../composants/AboutBanner/AboutBanner';
 import Footer from '../../composants/Footer/Footer';
-import bannerAbout from '../../assets/images/bannieres/image-mobile-about.webp';
+
 import Collapse from '../../composants/Collapse/Collapse';
 import data from './data';
 
@@ -21,7 +21,7 @@ const About = () => {
 		<>
 			<main className="about">
 				<Header />
-				<Banner text="" background_image={bannerAbout} />
+				<AboutBanner />
 				{categorieList}
 			</main>
 			<Footer />

@@ -1,22 +1,24 @@
 @import '../../../main.scss';
 
 .banner {
-	@include background-image;
-	position: relative;
-	height: 111px;
-	margin-top: 28px;
-	margin-bottom: 20px;
-	border-radius: 15px;
-	overflow: hidden;
+	@include banner;
+
 	@media (min-width: 765px) {
 		height: 223px;
 	}
+
 	.banner__background {
-		width: 100%;
-		height: inherit;
-		background-size: cover;
-		background-position: center;
-		filter: brightness(50%);
+		@include banner__background;
+		@include background-image;
+		@include background__url(
+			'../../assets/images/bannieres/image-mobile-accueil.webp'
+		);
+
+		@media (min-width: 765px) {
+			@include background__url(
+				'../../assets/images/bannieres/image-desktop-accueil.webp'
+			);
+		}
 	}
 
 	.banner__text {
@@ -24,16 +26,17 @@
 		@include flex-all-center;
 		justify-content: flex-start;
 		height: inherit;
-		width: 100%;
 		padding-left: 10px;
 		position: absolute;
 		top: 0;
+		width: 100%;
 		@media (min-width: 450px) {
 			justify-content: center;
 			.br__mobile {
 				display: none;
 			}
 		}
+
 		@media (min-width: 765px) {
 			@include font($font-weight-bold, 48px, $font-color-primary);
 		}

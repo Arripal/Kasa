@@ -92,3 +92,24 @@ $background-color-four: #ff6060;
 @mixin min-height-main {
 	min-height: 74.9vh;
 }
+
+/** Banner **/
+
+@mixin banner {
+	position: relative;
+	height: 111px;
+	margin-top: 28px;
+	margin-bottom: 20px;
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+@mixin banner__background {
+	min-width: inherit;
+	height: inherit;
+	filter: brightness(50%);
+}
+
+@mixin background__url($url) {
+	background-image: url($url);
+}
