@@ -5,20 +5,43 @@
 	@include min-height-main;
 
 	.errorPage__list {
+		@media (min-width: 750px) {
+			margin-top: 60px;
+		}
 		padding-top: 1em;
 		list-style-type: none;
 		@include flex-column-between;
 		align-items: center;
+
 		& li {
 			padding: 3em 0;
 			.errorPage__list-link {
 				@include font($font-weight-medium, 14px, $font-color-secondary);
 				@include link-underline;
+				@media (min-width: 750px) {
+					@include font($font-weight-medium, 18px, $font-color-secondary);
+				}
 			}
 			.errorPage__list-paragraph {
 				@include font($font-weight-medium, 18px, $font-color-third);
 				text-align: center;
 				line-height: 1.6;
+				@media (min-width: 750px) {
+					@include font($font-weight-medium, 36px, $font-color-third);
+					.br__mobile {
+						display: none;
+					}
+				}
+			}
+		}
+		.errorPage__list-image {
+			background-image: url('../../assets/images/logos/error-mobile-404.png');
+			width: 198px;
+			height: 99px;
+			@media (min-width: 750px) {
+				background-image: url('../../assets/images/logos/error-desktop-404.png');
+				width: 597px;
+				height: 263px;
 			}
 		}
 	}
