@@ -6,14 +6,14 @@ import Footer from '../../composants/Footer/Footer';
 import './homepage.style.scss';
 const HomePage = () => {
 	return (
-		<>
-			<main className="homepage">
+		<main className="homepage">
+			<section className="homepage__content">
 				<Header />
 				<Banner />
 				<Gallery />
-			</main>
+			</section>
 			<Footer />
-		</>
+		</main>
 	);
 };
 

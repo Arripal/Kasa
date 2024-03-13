@@ -1,47 +1,54 @@
 @import '../../../main.scss';
-
 .errorPage {
-	@include main;
-	@include min-height-main;
-
-	.errorPage__list {
-		@media (min-width: 750px) {
-			margin-top: 60px;
-		}
-		padding-top: 1em;
-		list-style-type: none;
+	&__content {
+		@include main;
 		@include flex-column-between;
-		align-items: center;
+		width: 100%;
+		&-list {
+			@media (min-width: 750px) {
+				margin-top: 60px;
+			}
+			@media (max-width: 750px) {
+				height: 80%;
+				margin-bottom: 16px;
+			}
+			@include flex-column-between;
+			align-items: center;
+			padding-top: 1em;
+			list-style-type: none;
 
-		& li {
-			padding: 3em 0;
-			.errorPage__list-link {
+			li {
+				padding: 3em 0;
+			}
+
+			&-link {
 				@include font($font-weight-medium, 14px, $font-color-secondary);
 				@include link-underline;
 				@media (min-width: 750px) {
 					@include font($font-weight-medium, 18px, $font-color-secondary);
 				}
 			}
-			.errorPage__list-paragraph {
+			&-paragraph {
 				@include font($font-weight-medium, 18px, $font-color-third);
-				text-align: center;
-				line-height: 1.6;
 				@media (min-width: 750px) {
 					@include font($font-weight-medium, 36px, $font-color-third);
 					.br__mobile {
 						display: none;
 					}
 				}
+				text-align: center;
+				line-height: 1.6;
 			}
-		}
-		.errorPage__list-image {
-			background-image: url('../../assets/images/logos/error-mobile-404.png');
-			width: 198px;
-			height: 99px;
-			@media (min-width: 750px) {
-				background-image: url('../../assets/images/logos/error-desktop-404.png');
-				width: 597px;
-				height: 263px;
+
+			&-image {
+				@media (min-width: 750px) {
+					background-image: url('../../assets/images/logos/error-desktop-404.png');
+					width: 597px;
+					height: 263px;
+				}
+				background-image: url('../../assets/images/logos/error-mobile-404.png');
+				width: 198px;
+				height: 99px;
 			}
 		}
 	}

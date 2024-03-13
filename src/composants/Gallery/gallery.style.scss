@@ -3,24 +3,24 @@
 .gallery {
 	@media (min-width: 400px) {
 		display: grid;
-		grid-template-columns: 340px;
-		justify-content: center;
+		grid-template-columns: 1fr;
+		place-items: center;
 		background-color: $background-color-secondary;
 		border-radius: 25px;
-		padding: 0.8em 0;
+		padding: 0.8em;
 		margin-bottom: 2rem;
 	}
 
 	@media (min-width: 835px) {
-		grid-template-columns: 340px 340px;
+		grid-template-columns: 1fr 1fr;
 		column-gap: 50px;
 		row-gap: 10px;
 	}
 
 	@media (min-width: 1150px) {
-		grid-template-columns: 340px 340px 340px;
-		column-gap: 40px;
-		row-gap: 0;
+		grid-template-columns: 1fr 1fr 1fr;
+		column-gap: 0;
+		row-gap: 10px;
 	}
 	.card__container {
 		min-width: 335px;

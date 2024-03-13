@@ -31,7 +31,11 @@ a {
 }
 
 /*    FIN REINITIALISATION    */
-
+.main {
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: 1fr auto;
+}
 /*   Variables   */
 
 $font-color-primary: #ffffff;
@@ -87,10 +91,6 @@ $background-color-four: #ff6060;
 	margin: 0 auto;
 	padding: 1.25em 1.25em 0 1.25em;
 	max-width: 1240px;
-}
-
-@mixin min-height-main {
-	min-height: 74.9vh;
 }
 
 /** Banner **/

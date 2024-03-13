@@ -1,7 +1,8 @@
 @import '../../../main.scss';
 
 .about {
-	@include flex-column-between;
-	@include main;
-	@include min-height-main;
+	.about__content {
+		@include flex-column-between;
+		@include main;
+	}
 }

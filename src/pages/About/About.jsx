@@ -18,14 +18,14 @@ const About = () => {
 		);
 	});
 	return (
-		<>
-			<main className="about">
+		<main className="about main">
+			<section className="about__content">
 				<Header />
 				<AboutBanner />
 				{categorieList}
-			</main>
+			</section>
 			<Footer />
-		</>
+		</main>
 	);
 };
 
