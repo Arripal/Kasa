@@ -4,5 +4,6 @@
 	.about__content {
 		@include flex-column-between;
 		@include main;
+		margin-bottom: 20px;
 	}
 }

@@ -4,35 +4,40 @@ import './collapse.style.scss';
 import arrow from '../../assets/images/arrows/arrowUp.svg';
 
 const Collapse = ({ categorie, contenu }) => {
-	const [isMenuOpen, setMenu] = useState(false);
-
-	function toggleMenu() {
-		setMenu(!isMenuOpen);
+	const [isCollapseOpen, setCollapse] = useState(false);
+	const content = (
+		<div
+			className={`collapse__contenu-text ${isCollapseOpen ? 'displayed' : ''}`}
+		>
+			{contenu}
+		</div>
+	);
+	function toggleCollapse() {
+		setCollapse(!isCollapseOpen);
 	}
 
 	return (
-		<div className="menu">
-			<h2 className="menu__categorie">
+		<div className="collapse">
+			<h2 className="collapse__categorie">
 				{categorie}
 				<img
 					src={arrow}
 					alt="arrow icon"
-					className="menu__categorie-arrow"
-					onClick={toggleMenu}
+					className={
+						isCollapseOpen
+							? 'collapse__categorie-arrow rotate'
+							: 'collapse__categorie-arrow'
+					}
+					onClick={toggleCollapse}
 				></img>
 			</h2>
 
-			<div
-				className={
-					isMenuOpen ? `menu__contenu menu__contenu-anime` : 'menu__contenu'
-				}
-			>
-				{contenu}
+			<div className={`collapse__contenu ${isCollapseOpen ? 'open' : ''}`}>
+				{content}
 			</div>
 		</div>
 	);
 };
-
 Collapse.propTypes = {
 	categorie: PropTypes.string,
 };

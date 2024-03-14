@@ -20,10 +20,6 @@ const router = createBrowserRouter([
 		path: 'about',
 		element: <About />,
 	},
-	{
-		path: 'not_found',
-		element: <ErrorPage />,
-	},
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(

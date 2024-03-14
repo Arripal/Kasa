@@ -7,12 +7,12 @@ const data = [
 	{
 		categorie: 'Respect',
 		contenu:
-			'La bienveillance fait partie des valeurs fondatrices de Kasa. Tou comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.',
+			'La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.',
 	},
 	{
 		categorie: 'Service',
 		contenu:
-			'La bienveillance fait partie des valeurs fondatrices de Kasa. Tou comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.',
+			'La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.',
 	},
 	{
 		categorie: 'Sécurité',
