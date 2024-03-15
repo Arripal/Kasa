@@ -4,31 +4,37 @@
 	position: relative;
 	z-index: 999;
 	overflow: hidden;
-	.collapse__categorie {
+	max-width: 1023px;
+	&__categorie {
+		@media (min-width: $desktop-breakpoint) {
+			height: 52px;
+			@include font($font-weight-bold, 24px, $font-color-primary);
+		}
+		@include font($font-weight-bold, 13px, $font-color-primary);
+		@include flex-all-center;
+		justify-content: space-between;
 		height: 30px;
 		background-color: $background-color-four;
 		border-radius: 5px;
 		padding: 0 0.625em;
-		@include flex-all-center;
-		justify-content: space-between;
-		@include font($font-weight-bold, 13px, $font-color-primary);
-		@media (min-width: 750px) {
-			height: 52px;
-			@include font($font-weight-bold, 24px, $font-color-primary);
-		}
+
 		&-arrow {
 			transform: rotate(0deg);
-			transition: 0.3s 0.1s ease-in;
-			transition: 0.3s 0.1s ease-out;
+			transition: 0.3s 0.1s ease-in, 0.2s 0.1s ease-out;
+			cursor: pointer;
+		}
+		.rotate {
+			transform: rotate(180deg);
 		}
 	}
-	.rotate {
-		transform: rotate(180deg);
-	}
-	.collapse__contenu {
+
+	&__contenu {
 		@include font($font-weight-regular, 13px, $font-color-secondary);
-		@media (min-width: 750px) {
+		@media (min-width: $desktop-breakpoint) {
 			@include font($font-weight-regular, 18px, $font-color-secondary);
+		}
+		@media (min-width: $desktop-breakpoint) {
+			transform: translateY(-52px);
 		}
 		background-color: $background-color-secondary;
 		position: relative;
@@ -39,25 +45,23 @@
 		line-height: 1.5;
 		height: 0;
 		transform: translateY(-30px);
-		@media (min-width: 750px) {
-			transform: translateY(-52px);
-		}
+
 		&-text {
 			opacity: 0;
 			transform: translateY(-30px);
-			@media (min-width: 750px) {
+			@media (min-width: $desktop-breakpoint) {
 				transform: translateY(-52px);
 			}
 		}
 	}
 
 	.displayed {
-		animation: fall 2s forwards;
+		animation: fall 1s forwards;
 	}
 	.open {
 		margin-bottom: 1em;
 		height: fit-content;
-		animation: fall 2s forwards;
+		animation: fall 1s forwards;
 	}
 }
 

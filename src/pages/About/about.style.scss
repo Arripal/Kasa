@@ -1,9 +1,14 @@
 @import '../../../main.scss';
 
 .about {
-	.about__content {
+	&__content {
 		@include flex-column-between;
 		@include main;
 		margin-bottom: 20px;
+		width: 100%;
+		&-collapses {
+			@include flex-column-between;
+			align-items: center;
+		}
 	}
 }

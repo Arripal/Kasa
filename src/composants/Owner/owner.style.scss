@@ -2,16 +2,26 @@
 
 .owner {
 	@include flex-all-center;
-	.owner__name {
+	&__name {
 		@include font($font-weight-medium, 12px, $font-color-third);
+		@media (min-width: $desktop-breakpoint) {
+			@include font($font-weight-medium, 18px, $font-color-third);
+			line-height: 1.6;
+			width: 90px;
+		}
 		width: 50px;
 		text-align: right;
 		line-height: 1.4;
 		margin-right: 5px;
 	}
-	.owner__photo {
+	&__photo {
 		border-radius: 50%;
 		width: 32px;
 		height: 32px;
+		margin-left: 10px;
+		@media (min-width: $desktop-breakpoint) {
+			width: 64px;
+			height: 64px;
+		}
 	}
 }

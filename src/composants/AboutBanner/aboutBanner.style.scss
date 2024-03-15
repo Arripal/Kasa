@@ -8,7 +8,7 @@
 	@include banner;
 	@include background-image;
 
-	@media (min-width: 765px) {
+	@media (min-width: $desktop-breakpoint) {
 		height: 223px;
 	}
 

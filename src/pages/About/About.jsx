@@ -22,7 +22,7 @@ const About = () => {
 			<section className="about__content">
 				<Header />
 				<AboutBanner />
-				{categorieList}
+				<section className="about__content-collapses">{categorieList}</section>
 			</section>
 			<Footer />
 		</main>

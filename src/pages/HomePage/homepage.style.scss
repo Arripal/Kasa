@@ -1,6 +1,6 @@
 @import '../../../main.scss';
 .homepage {
-	.homepage__content {
+	&__content {
 		@include main;
 	}
 }

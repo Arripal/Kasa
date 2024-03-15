@@ -54,6 +54,9 @@ $background-color-secondary: #f6f6f6;
 $background-color-third: #000000;
 $background-color-four: #ff6060;
 
+$desktop-breakpoint: 750px;
+$minw-breakpoint: 450px;
+
 @mixin background-image {
 	background-repeat: no-repeat;
 	background-size: cover;

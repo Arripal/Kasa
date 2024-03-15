@@ -5,10 +5,10 @@
 		@include flex-column-between;
 		width: 100%;
 		&-list {
-			@media (min-width: 750px) {
+			@media (min-width: $desktop-breakpoint) {
 				margin-top: 60px;
 			}
-			@media (max-width: 750px) {
+			@media (max-width: $desktop-breakpoint) {
 				height: 80%;
 				margin-bottom: 16px;
 			}
@@ -24,13 +24,13 @@
 			&-link {
 				@include font($font-weight-medium, 14px, $font-color-secondary);
 				@include link-underline;
-				@media (min-width: 750px) {
+				@media (min-width: $desktop-breakpoint) {
 					@include font($font-weight-medium, 18px, $font-color-secondary);
 				}
 			}
 			&-paragraph {
 				@include font($font-weight-medium, 18px, $font-color-third);
-				@media (min-width: 750px) {
+				@media (min-width: $desktop-breakpoint) {
 					@include font($font-weight-medium, 36px, $font-color-third);
 					.br__mobile {
 						display: none;
@@ -41,7 +41,7 @@
 			}
 
 			&-image {
-				@media (min-width: 750px) {
+				@media (min-width: $desktop-breakpoint) {
 					background-image: url('../../assets/images/logos/error-desktop-404.png');
 					width: 597px;
 					height: 263px;

@@ -7,11 +7,14 @@ const Rating = ({ rating }) => {
 	const ratings = [1, 2, 3, 4, 5];
 	const displayRating = ratings.map((_, index) => {
 		return (
-			<img
-				src={rating > index ? fullStar : emptyStar}
-				alt="star icon"
-				key={`star--${index}`}
-			/>
+			<div className="rating__container">
+				<img
+					src={rating > index ? fullStar : emptyStar}
+					alt="star icon"
+					key={`star--${index}`}
+					className="rating__container-star"
+				/>
+			</div>
 		);
 	});
 	return <section className="rating">{displayRating}</section>;

@@ -9,10 +9,10 @@
 	border-radius: 15px;
 	margin: 20px 0;
 	box-shadow: 0 2px 2px 0 rgba(0, 0%, 0%, 0.25);
-	@media (min-width: 465px) {
+	@media (min-width: $minw-breakpoint) {
 		height: 340px;
 	}
-	.card__title {
+	&__title {
 		@include font($font-weight-bold, 18px, $font-color-primary);
 
 		position: absolute;

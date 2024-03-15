@@ -10,7 +10,7 @@
 		height: 68px;
 	}
 
-	.header__image {
+	&__image {
 		width: 145px;
 		height: 47px;
 	}
@@ -24,7 +24,7 @@
 			justify-content: flex-end;
 		}
 
-		.nav__link {
+		&__link {
 			@include font($font-weight-medium, 12px, $font-color-secondary);
 			text-transform: uppercase;
 
