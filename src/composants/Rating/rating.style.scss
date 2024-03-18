@@ -4,16 +4,18 @@
 	@include flex-all-center;
 	@media (min-width: $desktop-breakpoint) {
 		height: 74px;
+		align-items: flex-end;
 	}
 	&__container {
-		width: 18px;
-		height: 19px;
+		min-width: 18px;
+
 		@media (min-width: $desktop-breakpoint) {
 			width: 36px;
-			height: 38px;
+			height: 46px;
 		}
+
 		&-star {
-			min-width: 25px;
+			width: 100%;
 		}
 	}
 
