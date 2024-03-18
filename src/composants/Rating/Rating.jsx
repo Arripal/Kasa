@@ -7,11 +7,10 @@ const Rating = ({ rating }) => {
 	const ratings = [1, 2, 3, 4, 5];
 	const displayRating = ratings.map((_, index) => {
 		return (
-			<div className="rating__container">
+			<div className="rating__container" key={`star--${index}`}>
 				<img
 					src={rating > index ? fullStar : emptyStar}
 					alt="star icon"
-					key={`star--${index}`}
 					className="rating__container-star"
 				/>
 			</div>

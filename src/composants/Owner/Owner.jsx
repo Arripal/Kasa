@@ -5,7 +5,7 @@ const Owner = ({ owner }) => {
 
 	return (
 		<article className="owner">
-			<span className="owner__name">{name}</span>
+			<p className="owner__name">{name}</p>
 			<img src={picture} alt={`${name} photo`} className="owner__photo" />
 		</article>
 	);

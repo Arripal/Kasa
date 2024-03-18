@@ -7,15 +7,20 @@
 		align-items: flex-end;
 	}
 	&__container {
-		min-width: 18px;
-
+		@include flex-all-center;
 		@media (min-width: $desktop-breakpoint) {
 			width: 36px;
-			height: 46px;
+			height: 36px;
 		}
-
+		width: 24px;
+		height: 24px;
 		&-star {
-			width: 100%;
+			width: 18px;
+			height: 18px;
+			@media (min-width: $desktop-breakpoint) {
+				width: 24px;
+				height: 24px;
+			}
 		}
 	}
 

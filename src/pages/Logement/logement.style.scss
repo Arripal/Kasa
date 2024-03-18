@@ -3,52 +3,55 @@
 .logement {
 	@include main;
 	margin-bottom: 50px;
-	&__infos {
-		@media (min-width: $desktop-breakpoint) {
-			position: relative;
-			margin-top: 30px;
-			margin-bottom: 50px;
-		}
-		&-tags {
-			margin: 10px 0;
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			width: fit-content;
-			height: fit-content;
-			@media (min-width: $desktop-breakpoint) {
-				margin-top: 20px;
-			}
-		}
-		&-title {
-			@include font($font-weight-medium, 18px, $font-color-third);
-			@media (min-width: 1150px) {
-				@include font($font-weight-medium, 36px, $font-color-third);
-				width: fit-content;
-			}
-			line-height: 1.6;
-		}
 
-		&-location {
-			margin: 5px 0;
-			@include font($font-weight-medium, 14px, $font-color-secondary);
-			@media (min-width: $desktop-breakpoint) {
-				@include font($font-weight-medium, 18px, $font-color-secondary);
-				width: fit-content;
-			}
-		}
-		&-owner {
-			@media (min-width: $desktop-breakpoint) {
-				position: absolute;
-				right: 0;
-				top: 0;
-				max-width: fit-content;
-				flex-direction: column-reverse;
-				align-items: flex-end;
-			}
+	&__container {
+		margin-top: 15px;
+		margin-bottom: 20px;
+		@media (min-width: $desktop-breakpoint) {
 			@include flex-all-center;
 			justify-content: space-between;
-			width: 100%;
+			margin-top: 20px;
+			margin-bottom: 40px;
+		}
+		&-infos {
+			&-tags {
+				margin: 10px 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: fit-content;
+				height: fit-content;
+				@media (min-width: $desktop-breakpoint) {
+					margin-top: 20px;
+				}
+			}
+			&-title {
+				@include font($font-weight-medium, 18px, $font-color-third);
+				@media (min-width: 1150px) {
+					@include font($font-weight-medium, 36px, $font-color-third);
+					width: fit-content;
+				}
+				line-height: 1.6;
+			}
+
+			&-location {
+				margin: 5px 0;
+				@include font($font-weight-medium, 14px, $font-color-secondary);
+				@media (min-width: $desktop-breakpoint) {
+					@include font($font-weight-medium, 18px, $font-color-secondary);
+					width: fit-content;
+				}
+			}
+			&-owner {
+				@media (min-width: $desktop-breakpoint) {
+					max-width: fit-content;
+					flex-direction: column-reverse;
+				}
+
+				@include flex-all-center;
+				justify-content: space-between;
+				width: 100%;
+			}
 		}
 	}
 

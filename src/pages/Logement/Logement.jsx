@@ -39,16 +39,22 @@ const Logement = () => {
 				<main className="logement">
 					<Header />
 					<Carousel pictures={appart.pictures} />
-					<div className="logement__infos">
-						<h2 className="logement__infos-title ">{appart.title}</h2>
-						<h3 className="logement__infos-location ">{appart.location}</h3>
-						<div className="logement__infos-tags">
-							{appart.tags.map((tag, index) => {
-								return <Tag name={tag} key={`${tag}--${index}`} />;
-							})}
+					<div className="logement__container ">
+						<div className="logement__container-infos">
+							<h2 className="logement__container-infos-title ">
+								{appart.title}
+							</h2>
+							<h3 className="logement__container-infos-location ">
+								{appart.location}
+							</h3>
+							<div className="logement__container-infos-tags">
+								{appart.tags.map((tag, index) => {
+									return <Tag name={tag} key={`${tag}--${index}`} />;
+								})}
+							</div>
 						</div>
 
-						<section className="logement__infos-owner">
+						<section className="logement__container-infos-owner">
 							<Rating rating={appart.rating} />
 							<Owner owner={appart.host} />
 						</section>
