@@ -11,7 +11,7 @@ import './logement.style.scss';
 
 const Logement = () => {
 	const { locationID } = useParams();
-
+	// Vérification de l'existence du logement
 	const appart = appartements.find((appart) => appart.id === locationID);
 
 	if (!appart) {
@@ -34,45 +34,41 @@ const Logement = () => {
 	);
 
 	return (
-		appart && (
-			<>
-				<main className="logement">
-					<Header />
-					<Carousel pictures={appart.pictures} />
-					<div className="logement__container ">
-						<div className="logement__container-infos">
-							<h2 className="logement__container-infos-title ">
-								{appart.title}
-							</h2>
-							<h3 className="logement__container-infos-location ">
-								{appart.location}
-							</h3>
-							<div className="logement__container-infos-tags">
-								{appart.tags.map((tag, index) => {
-									return <Tag name={tag} key={`${tag}--${index}`} />;
-								})}
-							</div>
+		<>
+			<main className="logement">
+				<Header />
+				<Carousel pictures={appart.pictures} />
+				<div className="logement__container ">
+					<div className="logement__container-infos">
+						<h2 className="logement__container-infos-title ">{appart.title}</h2>
+						<h3 className="logement__container-infos-location ">
+							{appart.location}
+						</h3>
+						<div className="logement__container-infos-tags">
+							{appart.tags.map((tag, index) => {
+								return <Tag name={tag} key={`${tag}--${index}`} />;
+							})}
 						</div>
-
-						<section className="logement__container-infos-owner">
-							<Rating rating={appart.rating} />
-							<Owner owner={appart.host} />
-						</section>
 					</div>
 
-					<section className="logement__collapses">
-						<div className="logement__collapses-container">
-							<Collapse categorie="Description" contenu={appart.description} />
-						</div>
-						<div className="logement__collapses-container">
-							<Collapse categorie="Équipements" contenu={equipmentsList} />
-						</div>
+					<section className="logement__container-infos-owner">
+						<Rating rating={appart.rating} />
+						<Owner owner={appart.host} />
 					</section>
-				</main>
+				</div>
 
-				<Footer />
-			</>
-		)
+				<section className="logement__collapses">
+					<div className="logement__collapses-container">
+						<Collapse categorie="Description" contenu={appart.description} />
+					</div>
+					<div className="logement__collapses-container">
+						<Collapse categorie="Équipements" contenu={equipmentsList} />
+					</div>
+				</section>
+			</main>
+
+			<Footer />
+		</>
 	);
 };
 

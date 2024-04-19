@@ -48,9 +48,11 @@ const Carousel = ({ pictures }) => {
 
 			{imagesList}
 
-			<span className="carousel__indicator">{`${imageIndex + 1} / ${
-				imagesList.length
-			}`}</span>
+			{imagesList.length > 1 && (
+				<span className="carousel__indicator">{`${imageIndex + 1} / ${
+					imagesList.length
+				}`}</span>
+			)}
 		</>
 	);
 
