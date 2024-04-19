@@ -1,0 +1,29 @@
+@import '../../../main.scss';
+
+.rating {
+	@include flex-all-center;
+	@media (min-width: $desktop-breakpoint) {
+		height: 74px;
+		align-items: flex-end;
+	}
+	&__container {
+		@include flex-all-center;
+		@media (min-width: $desktop-breakpoint) {
+			width: 36px;
+			height: 36px;
+		}
+		width: 24px;
+		height: 24px;
+		&-star {
+			width: 18px;
+			height: 18px;
+			@media (min-width: $desktop-breakpoint) {
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+
+	width: fit-content;
+	height: 33.59px;
+}

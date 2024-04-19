@@ -1,0 +1,27 @@
+@import '../../../main.scss';
+
+.owner {
+	@include flex-all-center;
+	&__name {
+		@include font($font-weight-medium, 14px, $font-color-third);
+		@media (min-width: $desktop-breakpoint) {
+			@include font($font-weight-medium, 18px, $font-color-third);
+			line-height: 1.5;
+			width: 90px;
+		}
+		width: 70px;
+		text-align: right;
+		line-height: 1.5;
+		margin-right: 5px;
+	}
+	&__photo {
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+		margin-left: 10px;
+		@media (min-width: $desktop-breakpoint) {
+			width: 64px;
+			height: 64px;
+		}
+	}
+}

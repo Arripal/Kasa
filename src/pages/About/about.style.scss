@@ -1,0 +1,13 @@
+@import '../../../main.scss';
+
+.about {
+	&__content {
+		@include main;
+		margin-bottom: 20px;
+		width: 100%;
+		&-collapses {
+			@include flex-column-between;
+			align-items: center;
+		}
+	}
+}

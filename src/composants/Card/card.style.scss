@@ -4,13 +4,17 @@
 	position: relative;
 	@include background-image;
 	min-width: 335px;
+	max-width: 340px;
 	height: 255px;
 	border-radius: 15px;
 	margin: 20px 0;
-	.card__title {
-		font-size: map-get($map: $font-sizes, $key: regular);
-		font-weight: map-get($map: $font-weights, $key: bold);
-		color: map-get($map: $font-colors, $key: primary);
+	box-shadow: 0 2px 2px 0 rgba(0, 0%, 0%, 0.25);
+	@media (min-width: $minw-breakpoint) {
+		height: 340px;
+	}
+	&__title {
+		@include font($font-weight-bold, 18px, $font-color-primary);
+
 		position: absolute;
 		bottom: 20px;
 		left: 20px;

@@ -1,0 +1,78 @@
+@import '../../../main.scss';
+
+.logement {
+	@include main;
+	margin-bottom: 50px;
+
+	&__container {
+		margin-top: 15px;
+		margin-bottom: 20px;
+		@media (min-width: $desktop-breakpoint) {
+			@include flex-all-center;
+			justify-content: space-between;
+			margin-top: 20px;
+			margin-bottom: 40px;
+		}
+		&-infos {
+			&-tags {
+				margin: 10px 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: fit-content;
+				height: fit-content;
+				@media (min-width: $desktop-breakpoint) {
+					margin-top: 20px;
+				}
+			}
+			&-title {
+				@include font($font-weight-medium, 18px, $font-color-third);
+				@media (min-width: 1150px) {
+					@include font($font-weight-medium, 36px, $font-color-third);
+					width: fit-content;
+				}
+				line-height: 1.6;
+			}
+
+			&-location {
+				margin: 5px 0;
+				@include font($font-weight-medium, 14px, $font-color-secondary);
+				@media (min-width: $desktop-breakpoint) {
+					@include font($font-weight-medium, 18px, $font-color-secondary);
+					width: fit-content;
+				}
+			}
+			&-owner {
+				@media (min-width: $desktop-breakpoint) {
+					max-width: fit-content;
+					flex-direction: column-reverse;
+				}
+
+				@include flex-all-center;
+				justify-content: space-between;
+				width: 100%;
+			}
+		}
+	}
+
+	.logement__collapses {
+		@media (min-width: 1096px) {
+			display: flex;
+			justify-content: space-between;
+		}
+		width: 100%;
+		&-container {
+			width: 100%;
+			@media (min-width: 1096px) {
+				width: 523px;
+			}
+		}
+	}
+
+	.logement__equipments {
+		list-style-type: none;
+		&-li {
+			padding: 0.2em 0;
+		}
+	}
+}

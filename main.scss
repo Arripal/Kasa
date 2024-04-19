@@ -31,44 +31,88 @@ a {
 }
 
 /*    FIN REINITIALISATION    */
+.main {
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: 1fr auto;
+}
+/*   Variables   */
 
-/*   Maps   */
+$font-color-primary: #ffffff;
+$font-color-secondary: #000000;
+$font-color-third: #ff6060;
 
-$font-sizes: (
-	'double-large': 48px,
-	'extra-large': 36px,
-	'large': 24px,
-	'regular': 18px,
-	'semi-regular': 14px,
-	'small-plus': 13px,
-	'small': 12px,
-	'extra-small': 10px,
-);
+$font-weight-regular: 400;
+$font-weight-medium: 600;
+$font-weight-bold: bold;
 
-$font-colors: (
-	'primary': #ffffff,
-	'secondary': #000000,
-	'third': #ff6060,
-);
+$card-color-primary: #ff6060;
+$card-color-secondary: #ffffff;
 
-$font-weights: (
-	'regular': 400,
-	'medium': 600,
-	'bold': bold,
-);
-$card-colors: (
-	'primary': #ff6060,
-	'secondary': #ffffff,
-);
+$background-color-primary: #ffffff;
+$background-color-secondary: #f6f6f6;
+$background-color-third: #000000;
+$background-color-four: #ff6060;
 
-$background-colors: (
-	'primary': #ffffff,
-	'secondary': #f6f6f6,
-	'third': #000000,
-);
+$desktop-breakpoint: 750px;
+$minw-breakpoint: 450px;
 
 @mixin background-image {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+}
+
+@mixin font($weight, $size, $color) {
+	font-weight: $weight;
+	font-size: $size;
+	color: $color;
+}
+
+@mixin link-underline {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+@mixin flex-all-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@mixin flex-column-between {
+	flex-direction: column;
+	display: flex;
+	justify-content: space-between;
+}
+
+@mixin flex-evenly {
+	justify-content: space-evenly;
+}
+
+@mixin main {
+	margin: 0 auto;
+	padding: 1.25em 1.25em 0 1.25em;
+	max-width: 1240px;
+}
+
+/** Banner **/
+
+@mixin banner {
+	position: relative;
+	height: 111px;
+	margin-top: 28px;
+	margin-bottom: 20px;
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+@mixin banner__background {
+	min-width: inherit;
+	height: inherit;
+	filter: brightness(50%);
+}
+
+@mixin background__url($url) {
+	background-image: url($url);
 }

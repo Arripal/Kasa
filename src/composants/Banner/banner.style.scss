@@ -1,0 +1,44 @@
+@import '../../../main.scss';
+
+.banner {
+	@include banner;
+
+	@media (min-width: $desktop-breakpoint) {
+		height: 223px;
+	}
+
+	&__background {
+		@include banner__background;
+		@include background-image;
+		@include background__url(
+			'../../assets/images/bannieres/image-mobile-accueil.webp'
+		);
+		object-fit: cover;
+		@media (min-width: $desktop-breakpoint) {
+			@include background__url(
+				'../../assets/images/bannieres/image-desktop-accueil.webp'
+			);
+		}
+	}
+
+	&__text {
+		@include font($font-weight-bold, 24px, $font-color-primary);
+		@include flex-all-center;
+		justify-content: flex-start;
+		padding-left: 10px;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: inherit;
+		@media (min-width: $minw-breakpoint) {
+			justify-content: center;
+			.br__mobile {
+				display: none;
+			}
+		}
+
+		@media (min-width: $desktop-breakpoint) {
+			@include font($font-weight-bold, 48px, $font-color-primary);
+		}
+	}
+}

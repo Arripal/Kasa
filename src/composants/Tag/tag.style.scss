@@ -1,0 +1,19 @@
+@import '../../../main.scss';
+
+.tag {
+	padding: 0.2em 0.6em;
+	margin-right: 9px;
+	border-radius: 5px;
+	background-color: $background-color-four;
+	@include flex-all-center;
+	@media (min-width: $desktop-breakpoint) {
+		padding: 0.3em 0.8em;
+		border-radius: 10px;
+	}
+	&__name {
+		@include font($font-weight-bold, 10px, $font-color-primary);
+		@media (min-width: $desktop-breakpoint) {
+			@include font($font-weight-bold, 14px, $font-color-primary);
+		}
+	}
+}

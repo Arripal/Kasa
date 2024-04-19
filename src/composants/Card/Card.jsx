@@ -1,6 +1,7 @@
 import React from 'react';
 import './card.style.scss';
 import PropTypes from 'prop-types';
+
 const Card = ({ title, cover }) => {
 	return (
 		<article className="card" style={{ backgroundImage: `url(${cover})` }}>
@@ -8,6 +9,7 @@ const Card = ({ title, cover }) => {
 		</article>
 	);
 };
+
 Card.propTypes = {
 	title: PropTypes.string,
 	cover: PropTypes.string,

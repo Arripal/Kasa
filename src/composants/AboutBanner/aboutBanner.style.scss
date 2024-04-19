@@ -1,0 +1,21 @@
+@import '../../../main.scss';
+
+.aboutBanner {
+	filter: brightness(100%);
+	@include background__url(
+		'../../assets/images/bannieres/image-mobile-about.webp'
+	);
+	@include banner;
+	@include background-image;
+
+	@media (min-width: $desktop-breakpoint) {
+		height: 223px;
+	}
+
+	@media (min-width: 660px) {
+		height: 223px;
+		@include background__url(
+			'../../assets/images/bannieres/image-desktop-about.webp'
+		);
+	}
+}

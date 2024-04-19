@@ -6,6 +6,7 @@ import About from './pages/About/About';
 import ErrorPage from './pages/ErrorPage/ErrorPage';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import '../main.scss';
+
 const router = createBrowserRouter([
 	{
 		path: '/',
@@ -17,8 +18,12 @@ const router = createBrowserRouter([
 		element: <Logement />,
 	},
 	{
-		path: '/about',
+		path: 'about',
 		element: <About />,
+	},
+	{
+		path: 'not_found',
+		element: <ErrorPage />,
 	},
 ]);
 

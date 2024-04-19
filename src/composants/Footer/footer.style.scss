@@ -3,20 +3,30 @@
 .footer {
 	width: 100%;
 	height: 209px;
-	background-color: map-get($map: $background-colors, $key: third);
-	display: flex;
+	margin-top: auto;
+	background-color: $background-color-third;
+	@include flex-all-center;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	.footer__copyright {
-		color: map-get($map: $font-colors, $key: primary);
-		font-weight: map-get($map: $font-weights, $key: medium);
-		font-size: map-get($map: $font-sizes, $key: small);
+	@media (min-width: $minw-breakpoint) {
+		justify-content: space-around;
+	}
+	&__copyright {
+		@include font($font-weight-medium, 12px, $font-color-primary);
 		line-height: 1.6;
 		margin-top: 15px;
+		@media (min-width: $minw-breakpoint) {
+			margin-top: 0;
+			@include font($font-weight-regular, 24px, $font-color-primary);
+			.br__mobile {
+				display: none;
+			}
+		}
 	}
-	.footer__image {
+	&__image {
 		width: 122px;
 		height: 40px;
+		@media (min-width: $minw-breakpoint) {
+			margin-top: 50px;
+		}
 	}
 }
