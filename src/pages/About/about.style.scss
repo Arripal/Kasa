@@ -6,6 +6,7 @@
 		margin-bottom: 20px;
 		width: 100%;
 		&-collapses {
+			margin-top: 1em;
 			@include flex-column-between;
 			align-items: center;
 		}

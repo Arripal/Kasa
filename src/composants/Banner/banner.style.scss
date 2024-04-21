@@ -2,7 +2,6 @@
 
 .banner {
 	@include banner;
-
 	@media (min-width: $desktop-breakpoint) {
 		height: 223px;
 	}

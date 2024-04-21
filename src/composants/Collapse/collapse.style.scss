@@ -5,6 +5,8 @@
 	z-index: 999;
 	overflow: hidden;
 	max-width: 1023px;
+	padding-top: 1em;
+
 	&__categorie {
 		@media (min-width: $desktop-breakpoint) {
 			height: 52px;
