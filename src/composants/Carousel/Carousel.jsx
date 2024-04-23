@@ -7,6 +7,8 @@ import angleRight from '../../assets/images/arrows/angle-right.svg';
 const Carousel = ({ pictures }) => {
 	const [imageIndex, setImageIndex] = useState(0);
 
+	//Création des balises img du Carousel
+
 	const imagesList = pictures.map((picture, index) => {
 		return (
 			<img
@@ -19,6 +21,8 @@ const Carousel = ({ pictures }) => {
 			/>
 		);
 	});
+
+	//Fonctions permettant de passer à l'image suivante ou précédente
 
 	const prevImage = () => {
 		imageIndex === 0

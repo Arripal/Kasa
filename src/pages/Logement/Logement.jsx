@@ -13,11 +13,11 @@ const Logement = () => {
 	const { locationID } = useParams();
 	// Vérification de l'existence du logement
 	const appart = appartements.find((appart) => appart.id === locationID);
-
+	//
 	if (!appart) {
-		return <Navigate replace to="/not_found" />;
+		return <Navigate replace to="*" />;
 	}
-
+	// Création de la liste des équipements disponibles dans le logement
 	const equipmentsList = (
 		<ul className="logement__equipments">
 			{appart.equipments.map((equipment, index) => {
@@ -66,7 +66,6 @@ const Logement = () => {
 					</div>
 				</section>
 			</main>
-
 			<Footer />
 		</>
 	);

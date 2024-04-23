@@ -5,6 +5,8 @@ import arrow from '../../assets/images/arrows/arrowUp.svg';
 
 const Collapse = ({ categorie, contenu }) => {
 	const [isCollapseOpen, setCollapse] = useState(false);
+
+	//Gestion de la class permettant l'affichage du texte du Collapse
 	const content = (
 		<div
 			className={`collapse__contenu-text ${isCollapseOpen ? 'displayed' : ''}`}
@@ -31,7 +33,7 @@ const Collapse = ({ categorie, contenu }) => {
 					onClick={toggleCollapse}
 				></img>
 			</h2>
-
+			{/* Gestion de la class permettant l'affichage du conteneur du contenu*/}
 			<div className={`collapse__contenu ${isCollapseOpen ? 'open' : ''}`}>
 				{content}
 			</div>
