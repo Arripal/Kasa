@@ -9,14 +9,9 @@
 	&__background {
 		@include banner__background;
 		@include background-image;
-		@include background__url(
-			'../../assets/images/bannieres/image-mobile-accueil.webp'
-		);
 		object-fit: cover;
-		@media (min-width: $desktop-breakpoint) {
-			@include background__url(
-				'../../assets/images/bannieres/image-desktop-accueil.webp'
-			);
+		@media (max-width: 615px) {
+			background-position: 15% 50%;
 		}
 	}
 

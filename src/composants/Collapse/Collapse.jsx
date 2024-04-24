@@ -5,7 +5,6 @@ import arrow from '../../assets/images/arrows/arrowUp.svg';
 
 const Collapse = ({ categorie, contenu }) => {
 	const [isCollapseOpen, setCollapse] = useState(false);
-
 	//Gestion de la class permettant l'affichage du texte du Collapse
 	const content = (
 		<div

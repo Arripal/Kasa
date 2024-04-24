@@ -110,7 +110,6 @@ $minw-breakpoint: 450px;
 @mixin banner__background {
 	min-width: inherit;
 	height: inherit;
-	filter: brightness(50%);
 }
 
 @mixin background__url($url) {

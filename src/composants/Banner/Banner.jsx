@@ -1,14 +1,17 @@
 import React from 'react';
 import './banner.style.scss';
 
-const Banner = () => {
+const Banner = ({ img, brightness, children }) => {
 	return (
 		<section className="banner">
-			<div className="banner__background"></div>
-			<p className="banner__text">
-				Chez vous,
-				<br className="br__mobile" /> partout et ailleurs
-			</p>
+			<div
+				className="banner__background"
+				style={{
+					backgroundImage: `url(${img})`,
+					filter: `brightness(${brightness}%)`,
+				}}
+			></div>
+			{children}
 		</section>
 	);
 };
