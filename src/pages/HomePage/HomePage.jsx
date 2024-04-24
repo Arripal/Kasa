@@ -12,7 +12,6 @@ const HomePage = () => {
 			<section className="homepage__content">
 				<Header />
 				<Banner img={backgroundImage} brightness={50}>
-					<div className="banner__brightness"></div>
 					<h1 className="banner__text">
 						Chez vous,
 						<br className="br__mobile" />
